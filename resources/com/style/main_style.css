@@ -1,0 +1,96 @@
+.border-pane {
+    -fx-background-color: linear-gradient(to bottom, #C2E9DA, #B0E9DA);
+}
+
+.tab {
+    -fx-background-color: #DCF0E9;
+    -fx-border-width: 1px 1px 0px 1px;
+    -fx-border-color: #CADBD5;
+}
+.tab:selected {
+    -fx-background-color: #C2E9DA;
+}
+
+
+.tab_report {
+    -fx-background-color: #DCF0E9;
+    -fx-border-width: 1px 1px 0px 1px;
+    -fx-border-color: #CADBD5;
+}
+.tab_report:selected {
+    -fx-background-color: #85d1b9;
+}
+
+.tab-pane {
+    -fx-background-color: linear-gradient(to bottom, #C2E9DA, #B0E9DA);
+}
+
+.combo-box {
+    -fx-background-color: linear-gradient(to bottom, #EFFFF8, #DCF0E9);
+    -fx-border-color: #88AC97;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #EFFFF8, #DCF0E9);
+    -fx-border-color: #88AC97;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.button:pressed, .button:default:hover:pressed {
+    -fx-background-color: linear-gradient(to bottom, #d8eee7, #c9e8dd);
+    -fx-border-color: #88AC97;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.button_accept {
+    -fx-background-color: linear-gradient(to bottom, #85d1b9, #46b995);
+    -fx-border-color: #88AC97;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+.button_accept:pressed, .button:default:hover:pressed {
+    -fx-background-color: linear-gradient(to bottom, #45b894, #389578);
+    -fx-border-color: #247224;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+}
+
+.table-column-center {
+  -fx-alignment: CENTER;
+}
+.table-column-right {
+  -fx-alignment: CENTER-RIGHT;
+}
+.table-column:focused .table-row-cell:filled:focused:selected
+{
+    -fx-background-color: #46b995;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: linear-gradient(to bottom, #85d1b9, #46b995);
+}
+.table-view:focused .table-row-cell:filled:focused:selected
+{
+    -fx-background-color: #46b995;
+}
+
+.noheader .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+
+.weekend_column {
+    -fx-background-color: #DCF0E9;
+}
+
+.context-menu {
+    -fx-background-color: #EFFFF8;
+}
+.context-menu:selected {
+    -fx-background-color: #C2E9DA;
+}

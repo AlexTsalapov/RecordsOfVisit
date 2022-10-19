@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171"
+            style="-fx-background-color: #C2E9DA">
+    <center>
+        <VBox alignment="TOP_CENTER">
+            <children>
+                <Label text="Добро пожаловать">
+                    <font>
+                        <Font size = "50"/>
+                    </font>
+                </Label>
+            </children>
+            <BorderPane.margin>
+                <Insets top="300"/>
+            </BorderPane.margin>
+        </VBox>
+    </center>
+</BorderPane>

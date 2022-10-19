@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="main.java.com.app.controller.AppController" stylesheets="main/resources/com/style/main_style.css">
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text = "Табель посещаемости">
+                    <content>
+                        <BorderPane styleClass="border-pane">
+                            <center>
+                                <VBox alignment="TOP_CENTER" prefHeight="361.0" prefWidth="300.0">
+                                    <children>
+                                        <FlowPane alignment="CENTER">
+                                            <Label text = "Группа   " />
+                                            <ComboBox fx:id="cb_group" onAction="#actionCBGroup"/>
+                                            <Label text = " :   "/>
+                                            <ComboBox fx:id="cb_month" onAction="#actionCBMonth"/>
+                                        </FlowPane>
+                                        <Pane minHeight="20"/>
+                                        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" prefWidth="100.0" prefHeight="100" VBox.vgrow="ALWAYS">
+                                            <content>
+                                                <TableView fx:id="tv_childrens" maxHeight="900"/>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                    <BorderPane.margin>
+                                        <Insets bottom="35.0" left="50.0" right="50.0" top="20.0" />
+                                    </BorderPane.margin>
+                                </VBox>
+                            </center>
+                            <bottom>
+                                <VBox alignment="BOTTOM_CENTER">
+                                    <HBox alignment="CENTER_LEFT">
+                                        <Button text = "  "/>
+                                        <Label text = "  Присутствует          "/>
+                                        <Button text = "Н"/>
+                                        <Label text = "  Отсутствует          "/>
+                                        <Button text = "Б"/>
+                                        <Label text = "  Отсутствует по болезни          "/>
+                                        <Button text = "В"/>
+                                        <Label text = "  Выходной          "/>
+                                        <Button text = "И"/>
+                                        <Label text = "  Исключен"/>
+                                        <Button text = "Печать" styleClass="button_accept" fx:id="btn_print_group" onAction="#actionBtnPrint" visible="false"/>
+                                    </HBox>
+                                    <BorderPane.margin>
+                                        <Insets bottom="30.0" left="50.0" right="50.0"/>
+                                    </BorderPane.margin>
+                                </VBox>
+                            </bottom>
+                        </BorderPane>
+                    </content>
+                </Tab>
+                <Tab text = "Сводный табель">
+                    <content>
+                        <BorderPane styleClass="border-pane">
+                            <center>
+                                <VBox alignment="TOP_CENTER" prefHeight="361.0" prefWidth="300.0">
+                                    <children>
+                                        <FlowPane alignment="CENTER">
+                                            <ComboBox fx:id="cb_report_month" onAction="#actionCBReportMonth"/>
+                                        </FlowPane>
+                                        <Pane minHeight="20"/>
+                                        <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                            <content>
+                                                <TabPane maxHeight="900" tabClosingPolicy="UNAVAILABLE">
+                                                    <tabs>
+                                                        <Tab text="По группам" styleClass="tab_report">
+                                                            <content>
+                                                                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" prefWidth="100.0" prefHeight="100" VBox.vgrow="ALWAYS">
+                                                                    <content>
+                                                                        <TableView fx:id="tv_report_groups" maxHeight="836"/>
+                                                                    </content>
+                                                                </ScrollPane>
+                                                            </content>
+                                                        </Tab>
+                                                        <Tab text="По категориям" styleClass="tab_report">
+                                                            <content>
+                                                                <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" prefWidth="100.0" prefHeight="100" VBox.vgrow="ALWAYS">
+                                                                    <content>
+                                                                        <TableView fx:id="tv_report_categories" maxHeight="836"/>
+                                                                    </content>
+                                                                </ScrollPane>
+                                                            </content>
+                                                        </Tab>
+                                                    </tabs>
+                                                </TabPane>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                    <BorderPane.margin>
+                                        <Insets bottom="35.0" left="50.0" right="50.0" top="20.0" />
+                                    </BorderPane.margin>
+                                </VBox>
+                            </center>
+                            <bottom>
+                                <VBox alignment="BOTTOM_CENTER">
+                                    <BorderPane>
+                                        <right>
+                                            <Button fx:id="btn_print_total" text = "Печать" styleClass="button_accept" visible="false"/>
+                                        </right>
+                                    </BorderPane>
+                                    <BorderPane.margin>
+                                        <Insets bottom="30.0" left="50.0" right="50.0"/>
+                                    </BorderPane.margin>
+                                </VBox>
+                            </bottom>
+                        </BorderPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="main/resources/com/style/main_style.css" style="-fx-background-color: #C2E9DA"
+            fx:controller="main.java.com.app.controller.MoveChildController">
+    <top>
+        <VBox alignment="TOP_CENTER">
+            <children>
+                <FlowPane>
+                    <TilePane>
+                        <Label text = "ФИО:   "/>
+                        <TextField fx:id="tf_fio" editable="false"/>
+                    </TilePane>
+                    <Pane minHeight="40"/>
+                    <TilePane>
+                        <Label text = "Выберите новую группу:         "/>
+                        <ComboBox fx:id="cb_group"/>
+                    </TilePane>
+                    <Pane minHeight="40"/>
+                </FlowPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="50.0" right="30.0" top="20.0" />
+            </BorderPane.margin>
+        </VBox>
+    </top>
+    <bottom>
+        <VBox alignment="BOTTOM_CENTER">
+            <children>
+                <BorderPane>
+                    <left>
+                        <Button fx:id="btn_cancel" text = "Отмена" onAction="#cancel"/>
+                    </left>
+                    <right>
+                        <Button fx:id="btn_move" text = "Сохранить" styleClass="button_accept" onAction="#move"/>
+                    </right>
+                </BorderPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" />
+            </BorderPane.margin>
+        </VBox>
+    </bottom>
+</BorderPane>

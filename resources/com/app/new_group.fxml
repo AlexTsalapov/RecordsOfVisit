@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+            stylesheets="main/resources/com/style/main_style.css" style="-fx-background-color: #C2E9DA"
+            fx:controller="main.java.com.app.controller.NewGroupController">
+    <top>
+        <VBox alignment="TOP_CENTER">
+            <children>
+                <FlowPane alignment="TOP_LEFT">
+                    <Label text = "Название группы:   "/>
+                    <TextField fx:id="tf_group_name"  promptText = "Введите название"/>
+                </FlowPane>
+                <FlowPane alignment="TOP_LEFT">
+                    <Label text = "Выберите тип группы:   "/>
+                    <VBox>
+                        <Pane minHeight="30"/>
+                        <RadioButton fx:id="rbtn_garten" text="Детский сад"/>
+                        <Pane minHeight="10"/>
+                        <RadioButton fx:id="rbtn_manger" text="Ясли"/>
+                    </VBox>
+
+                </FlowPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="50.0" right="30.0" top="20.0" />
+            </BorderPane.margin>
+        </VBox>
+    </top>
+    <bottom>
+        <VBox alignment="BOTTOM_CENTER">
+            <children>
+                <BorderPane>
+                    <left>
+                        <Button fx:id="btn_cancel" text = "Отмена" onAction="#cancel"/>
+                    </left>
+                    <right>
+                        <Button fx:id="btn_create" text = "Создать" styleClass="button_accept" onAction="#create"/>
+                    </right>
+                </BorderPane>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="20.0" right="20.0" />
+            </BorderPane.margin>
+        </VBox>
+    </bottom>
+</BorderPane>
